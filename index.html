@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>whitehors.es</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400">
+	<style>
+		body {
+			margin: 0;
+			overflow: hidden;
+			font-family: "Open Sans", sans-serif;
+			text-align: center;
+			text-rendering: optimizeLegibility;
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+		}
+		h1, h2 {
+			position: absolute;
+			right: 0;
+			width: 25rem;
+			margin: 0;
+			z-index: 2;
+			background: black;
+			color: white;
+			text-align: left;
+			opacity: 0.5;
+		}
+		h1 {
+			top: 30px;
+			padding: 0.5rem 1rem;
+			font-size: 2rem;
+			font-weight: 300;
+			line-height: 2rem;
+		}
+		h2 {
+			top: calc(3em + 30px);
+			padding: 0 1rem 0.5rem;
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5rem;
+		}
+		#map {
+			width: 100vw;
+			height: 100vh;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		.only-at-tiny-sizes {
+			display: none;
+		}
+
+		img {
+			width: 20rem;
+		}
+
+		@media screen and (max-width: 1024px), screen and (max-device-width: 1024px) {
+			h1, h2 {
+				top: 0;
+				opacity: 1;
+				background: #616263;
+			}
+			h1 {
+				left: 0;
+				width: 35vw;
+				padding: 1.25rem 1rem;
+				opacity: 1;
+			}
+			h2 {
+				right: 0;
+				width: 65vw;
+				padding: 1.5rem 1rem;
+				text-align: right;
+			}
+			#map {
+				height: calc(100vh - );
+			}
+		}
+		@media screen and (max-width: 768px), screen and (max-device-width: 768px) {
+			.hide-at-small-sizes {
+				display: none;
+			}
+		}
+		@media screen and (max-width: 568px), screen and (max-device-width: 568px) {
+			h1 {
+				width: 40vw;
+			}
+			h2 {
+				width: 60vw;
+				padding: 0.75rem 1rem;
+			}
+			.only-at-tiny-sizes {
+				display: inline-block;
+			}
+	</style>
+	<script src="Scripts/mapsapi.js"></script>
+	<script src="Scripts/gmaps.js" ></script>
+</head>
+
+<body>
+    <h1>White Horses</h1>
+    <h2 class="hide-at-small-sizes">White horses Becky and Rich have visited</h2>
+    <div id="map">Loading...</div>
+    <script>
+        var request = new XMLHttpRequest();
+        var isAsynchronous = true;
+        var url = 'horses.json';
+
+        request.open('GET', url, isAsynchronous);
+
+        request.onload = function (xmlEvent) {
+            var resp = JSON.parse(request.response);
+
+            var map = new GMaps({
+                div: '#map'
+            })
+
+            for(var i = 0; i < resp.length; i++)
+            {
+            	var horse = resp[i];
+
+            	var body = "<h3>" + horse.name + "</h3>";
+
+            	var pin = "images/pin_grey.svg";
+            	if(resp[i].visited) {
+            		pin = "images/pin_green.svg";
+            		body += "<p>Visited on " + horse.date + "</p>";
+            		body += "<img src='" + horse.image + "' ></img>";
+            	} else {
+            		body += "<p>Not yet visited</p>";
+            	}
+
+            	var marker = {
+	                lat: horse.latitude,
+	                lng: horse.longitude,
+	                title: horse.name,
+	                infoWindow: {
+	                    content: body 
+	                },
+	                icon: pin,
+	                animation: google.maps.Animation.DROP
+            	}
+
+            	map.addMarker(marker);	
+            }
+
+			map.fitZoom();
+        };
+        request.send();
+    </script>
+</body>
+</html>
+
