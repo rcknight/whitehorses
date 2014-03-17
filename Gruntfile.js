@@ -108,7 +108,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-image-resize');
 
-	grunt.registerTask('build', [ 'jshint',"copy:images", "imageoptim", "copy:html", "copy:json", "copy:scripts"]);
+	grunt.registerTask('build', [ 'jshint',"copy:images", "imageoptim", "copy:html", "copy:json", "copy:scripts", "copy:cname"]);
     grunt.registerTask('deploy', ['build', 'gh-pages']);
 	grunt.registerTask('serve', ['build', 'connect', 'open', 'watch']);
 
