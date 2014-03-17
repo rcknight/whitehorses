@@ -33,6 +33,11 @@ module.exports = function(grunt) {
 				expand: true,
 				src: ['images/**/*'],
 				dest: 'dist/'
+			},
+			cname: {
+				expand: true,
+				src: ['CNAME'],
+				dest: 'dist/CNAME'
 			}
 		},
 		jshint: {
