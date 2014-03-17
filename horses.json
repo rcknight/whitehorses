@@ -1,16 +1,59 @@
 [
 	{
-		"name": "Horse 1",
-		"latitude": -12.043333,
-  		"longitude": -77.028333,
-		"visited": false
-	},
-	{
-		"name": "Horse 2",
-		"latitude": -12.053333,
-  		"longitude": -77.058333,
+		"name": "Alton Barnes",
+		"latitude": 51.372261,
+  		"longitude": -1.8491075,
 		"visited": true,
 		"image": "altonbarnes",
 		"date": "16th March 2014"
+	},
+	{
+		"name": "Broad Town",
+		"latitude": 51.503293,
+  		"longitude": -1.8591142,
+		"visited": false
+	},
+	{
+		"name": "Cherhill",
+		"latitude": 51.425159,
+  		"longitude": -1.9297743,
+		"visited": false
+	},
+	{
+		"name": "Devizes",
+		"latitude": 51.375952,
+  		"longitude": -1.9784001,
+		"visited": false
+	},
+	{
+		"name": "Hackpen",
+		"latitude": 51.472516,
+  		"longitude": -1.8176579,
+		"visited": false
+	},
+	{
+		"name": "Marlborough",
+		"latitude": 51.412696,
+  		"longitude": -1.7374894,
+		"visited": false
+	},
+	{
+		"name": "Pewsey",
+		"latitude": 51.321226,
+  		"longitude": -1.7565036,
+		"visited": false
+	},
+	{
+		"name": "Westbury",
+		"latitude": 51.263593,
+  		"longitude": -2.1470761,
+		"visited": false
+	},
+	{
+		"name": "Uffington",
+		"latitude": 51.577696,
+  		"longitude": -1.5667212,
+		"visited": false
 	}
+
 ]
