@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 			cname: {
 				expand: true,
 				src: ['CNAME'],
-				dest: 'dist/CNAME'
+				dest: 'dist/'
 			}
 		},
 		jshint: {
