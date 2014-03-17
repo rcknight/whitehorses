@@ -1,0 +1,16 @@
+[
+	{
+		"name": "Horse 1",
+		"latitude": -12.043333,
+  		"longitude": -77.028333,
+		"visited": false
+	},
+	{
+		"name": "Horse 2",
+		"latitude": -12.053333,
+  		"longitude": -77.058333,
+		"visited": true,
+		"image": "altonbarnes",
+		"date": "16th March 2014"
+	}
+]
