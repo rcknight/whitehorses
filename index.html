@@ -122,14 +122,17 @@
 
             	var body = "<h3>" + horse.name + "</h3>";
 
-            	var pin = "images/pin_grey.svg";
-            	if(resp[i].visited) {
-            		pin = "images/pin_green.svg";
+            	var pinPath = "images/pin_red.png";
+
+            	if(horse.visited) {
+            		pinPath = "images/pin_green.png";
             		body += "<p>Visited on " + horse.date + "</p>";
             		body += "<a href='images/" + horse.image + ".jpg'><img src='images/" + horse.image + "_thumb.jpg' ></img></a>";
             	} else {
             		body += "<p>Not yet visited</p>";
             	}
+
+            	var myIcon = new google.maps.MarkerImage(pinPath, null, null, null, new google.maps.Size(27,43));
 
             	var marker = {
 	                lat: horse.latitude,
@@ -138,7 +141,7 @@
 	                infoWindow: {
 	                    content: body 
 	                },
-	                icon: pin,
+	                icon: myIcon,
 	                animation: google.maps.Animation.DROP
             	}
 
