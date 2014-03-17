@@ -93,8 +93,8 @@
 				display: inline-block;
 			}
 	</style>
-	<script src="Scripts/mapsapi.js"></script>
-	<script src="Scripts/gmaps.js" ></script>
+	<script src="scripts/mapsapi.js"></script>
+	<script src="scripts/gmaps.js" ></script>
 </head>
 
 <body>
@@ -125,7 +125,7 @@
             	if(resp[i].visited) {
             		pin = "images/pin_green.svg";
             		body += "<p>Visited on " + horse.date + "</p>";
-            		body += "<img src='" + horse.image + "' ></img>";
+            		body += "<a href='images/" + horse.image + ".jpg'><img src='images/" + horse.image + "_thumb.jpg' ></img></a>";
             	} else {
             		body += "<p>Not yet visited</p>";
             	}

@@ -1,0 +1,30 @@
+{
+  "name": "whitehors.es",
+  "version": "0.0.0",
+  "description": "A map showing the wiltshire white horses",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rcknight/whitehorses"
+  },
+  "author": "Rich Knight",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/rcknight/whitehorses/issues"
+  },
+  "devDependencies": {
+    "grunt": ">=0.4.2",
+    "grunt-contrib-jshint": ">=0.7.2",
+    "grunt-contrib-concat": ">=0.3.0",
+    "grunt-contrib-watch": ">=0.5.3",
+    "grunt-contrib-connect": ">=0.5.0",
+    "grunt-open": ">=0.2.2",
+    "grunt-imageoptim": ">=1.4.0",
+    "grunt-gh-pages": ">=0.9.1",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-image-resize": "~0.3.0"
+  }
+}
