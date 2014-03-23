@@ -53,7 +53,9 @@
 		"name": "Uffington",
 		"latitude": 51.577696,
   		"longitude": -1.5667212,
-		"visited": false
+		"visited": true,
+        "image": "uffington",
+        "date": "22nd March 2014"
 	}
 
 ]
