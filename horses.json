@@ -47,15 +47,17 @@
 		"name": "Westbury",
 		"latitude": 51.263593,
   		"longitude": -2.1470761,
-		"visited": false
+		"visited": true,
+		"image": "westbury",
+		"date": "12th April 2014"
 	},
 	{
 		"name": "Uffington",
 		"latitude": 51.577696,
   		"longitude": -1.5667212,
 		"visited": true,
-        	"image": "uffington",
-        	"date": "22nd March 2014"
+        "image": "uffington",
+        "date": "22nd March 2014"
 	}
 
 ]
