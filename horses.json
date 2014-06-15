@@ -11,7 +11,9 @@
 		"name": "Broad Town",
 		"latitude": 51.503293,
   		"longitude": -1.8591142,
-		"visited": false
+		"visited": true,
+		"date": "26th April 2014",
+		"image": "broadtown"
 	},
 	{
 		"name": "Cherhill",
@@ -41,7 +43,9 @@
 		"name": "Pewsey",
 		"latitude": 51.321226,
   		"longitude": -1.7565036,
-		"visited": false
+  		"visited": true
+		"image": "pewsey",
+		"date": " April 2014"
 	},
 	{
 		"name": "Westbury",
